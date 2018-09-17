@@ -1,0 +1,179 @@
+2017-10-22 02:19:56 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/db/Connection.php:646
+Stack trace:
+#0 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/db/Connection.php(646): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/db/Connection.php(579): yii\db\Connection->createPdoInstance()
+#2 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#3 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#4 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#6 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#8 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#16 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('up', Array)
+#17 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('up', Array)
+#18 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/up', Array)
+#19 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/up', Array)
+#20 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /Applications/MAMP/htdocs/speedLink/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/db/Connection.php:584
+Stack trace:
+#0 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#1 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#4 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAll()
+#6 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/db/mysql/Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/db/Schema.php(152): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/console/controllers/MigrateController.php(194): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(814): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(155): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#14 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('up', Array)
+#15 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('up', Array)
+#16 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/up', Array)
+#17 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/up', Array)
+#18 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /Applications/MAMP/htdocs/speedLink/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2017-10-22 02:19:56 [-][-][-][info][application] $_SERVER = [
+    'TERM' => 'xterm-256color'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.dBCd2Eq8bz/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x0:0:0'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'LANG' => 'en_US.UTF-8'
+    'HOME' => '/Users/mohammad'
+    'MAIL' => '/var/mail/root'
+    'LOGNAME' => 'root'
+    'USER' => 'root'
+    'USERNAME' => 'root'
+    'SHELL' => '/bin/sh'
+    'SUDO_COMMAND' => '/usr/bin/php yii migrate/up --migrationPath=@vendor/yiimodules/yii2-categories/migrations'
+    'SUDO_USER' => 'mohammad'
+    'SUDO_UID' => '501'
+    'SUDO_GID' => '20'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1508638796.2287
+    'REQUEST_TIME' => 1508638796
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/up'
+        2 => '--migrationPath=@vendor/yiimodules/yii2-categories/migrations'
+    ]
+    'argc' => 3
+]
+2018-09-15 10:30:13 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "init". in /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('init', Array)
+#1 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('init', Array)
+#2 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#3 /Applications/MAMP/htdocs/speedLink/yii(27): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "init". in /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('init', Array)
+#1 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 /Applications/MAMP/htdocs/speedLink/yii(27): yii\base\Application->run()
+#3 {main}
+2018-09-15 10:30:13 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/b8/tvfyrm1x3xlfjb1mv3m4g3580000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.4dkjgYu5jk/Render'
+    'TERM_PROGRAM_VERSION' => '404'
+    'OLDPWD' => '/Users/mohammadalsayyed'
+    'TERM_SESSION_ID' => 'EE231900-7A73-4F48-A641-1F0854918141'
+    'USER' => 'mohammadalsayyed'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.lL2iju09fq/Listeners'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/Applications/MAMP/htdocs/speedLink'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/mohammadalsayyed'
+    'LOGNAME' => 'mohammadalsayyed'
+    'LC_CTYPE' => 'UTF-8'
+    'SECURITYSESSIONID' => '186a8'
+    '_' => './yii'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1537007413.0749
+    'REQUEST_TIME' => 1537007413
+    'argv' => [
+        0 => './yii'
+        1 => 'init'
+    ]
+    'argc' => 2
+]
+2018-09-15 10:30:28 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "init". in /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('init', Array)
+#1 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('init', Array)
+#2 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#3 /Applications/MAMP/htdocs/speedLink/yii(27): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "init". in /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('init', Array)
+#1 /Applications/MAMP/htdocs/speedLink/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 /Applications/MAMP/htdocs/speedLink/yii(27): yii\base\Application->run()
+#3 {main}
+2018-09-15 10:30:28 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/b8/tvfyrm1x3xlfjb1mv3m4g3580000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.4dkjgYu5jk/Render'
+    'TERM_PROGRAM_VERSION' => '404'
+    'OLDPWD' => '/Users/mohammadalsayyed'
+    'TERM_SESSION_ID' => 'EE231900-7A73-4F48-A641-1F0854918141'
+    'USER' => 'mohammadalsayyed'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.lL2iju09fq/Listeners'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/Applications/MAMP/htdocs/speedLink'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/mohammadalsayyed'
+    'LOGNAME' => 'mohammadalsayyed'
+    'LC_CTYPE' => 'UTF-8'
+    'SECURITYSESSIONID' => '186a8'
+    '_' => '/usr/bin/php'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1537007428.1191
+    'REQUEST_TIME' => 1537007428
+    'argv' => [
+        0 => 'yii'
+        1 => 'init'
+    ]
+    'argc' => 2
+]

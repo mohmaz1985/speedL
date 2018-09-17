@@ -1,0 +1,15 @@
+/* Select Language */
+.skin-black .main-header .navbar .sidebar-toggle{
+	border-left: #eee 1px solid;
+}
+.languageSelect{
+	float: right;
+	padding: 7px 15px;
+}
+/* End Select Language */
+.pull-right{
+	float: left !important;
+}
+.pull-left{
+	float: right !important;
+}
